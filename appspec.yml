@@ -4,7 +4,7 @@ Resources:
   - TargetService:
       Type: AWS::ECS::Service
       Properties:
-        TaskDefinition: "arn:aws:ecs:us-east-1:047719630685:task-definition/springBootTD:2"
+        TaskDefinition: "arn:aws:ecs:us-east-1:047719630685:task-definition/springBootTD:4"
         LoadBalancerInfo:
           ContainerName: "springBoot"
           ContainerPort: 8080
