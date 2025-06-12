@@ -18,7 +18,7 @@ phases:
       - echo Building the JAR file...
       - mvn clean install
       - echo Creating the ECR repo
-      - aws ecr create-repository --repository-name $REPO_NAME --region $REGION
+      # - aws ecr create-repository --repository-name $REPO_NAME --region $REGION
       - echo Building the Docker image...
       - docker build -t $REPO_NAME .
       - docker tag $REPO_NAME:$IMAGE_TAG $ACCOUNT_ID.dkr.ecr.$REGION.amazonaws.com/$REPO_NAME:$IMAGE_TAG
