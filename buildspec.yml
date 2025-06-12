@@ -11,6 +11,7 @@ phases:
       - REGION=us-east-1
       - REPO_NAME=springboot
       - IMAGE_TAG=latest
+      - echo "Pavanteja@12pavan" | docker login -u "pavanthumati" --password-stdin
       - aws ecr get-login-password --region $REGION | docker login --username AWS --password-stdin $ACCOUNT_ID.dkr.ecr.$REGION.amazonaws.com
 
   build:
